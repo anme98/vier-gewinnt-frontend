@@ -1,0 +1,27 @@
+.field {
+  width: 100px;
+  height: 100px;
+  background-color: #3f50b5;
+  display: inline-block;
+}
+
+.field > div {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0 0 10px;
+  border-radius: 40px;
+  background-color: white;
+  display: inline-block;
+}
+
+.field:hover {
+  cursor: pointer;
+}
+
+.field > div.red {
+  background-color: red;
+}
+
+.field > div.yellow {
+  background-color: yellow;
+}

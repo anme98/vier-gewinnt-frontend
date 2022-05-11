@@ -1,0 +1,5 @@
+<mat-grid-list class="playfield" [cols]="sizeX" gutterSize="-1">
+  <mat-grid-tile *ngFor="let item of this.playField; let counter = index">
+    <app-field [color]="this.playField[counter]" [index]="counter" (indexEventEmitter)="playConnectFour($event)" ></app-field>
+  </mat-grid-tile>
+</mat-grid-list>

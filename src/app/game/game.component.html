@@ -1,0 +1,21 @@
+<div class="player text-center">
+  <h2>
+    <span *ngIf="currentPlayer" >{{ player[0] }}</span>
+    <span *ngIf="!currentPlayer" >{{ player[1] }}</span>
+    <span *ngIf="!gameOver" >: It's your Turn!</span>
+    <span *ngIf="gameOver" >: Has won!</span>
+  </h2>
+</div>
+<app-playfield [playField]="gameData" [sizeX]="sizeX" [currentPlayer]="currentPlayer"></app-playfield>
+<div class="reset-button">
+  <button (click)="resetGame()" mat-flat-button color="primary">Reset Game</button>
+</div>
+<div class="score">
+  <h3>Score</h3>
+  <table>
+    <tr>
+      <th>Yellow</th>
+      <th>Red</th>
+    </tr>
+  </table>
+</div>
